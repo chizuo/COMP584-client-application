@@ -10,44 +10,36 @@ const Footer = () => {
 
         //Redisplay Logo at the Bottom with Name and Icon
         <div className='footer'>
-            <div className="container">
-                <div className="top">
-                    <div className="logo-footer">
+            <div className="top">
+                <div className="logo-footer">
                     <img src={images.logo} alt="app__logo" />
-                        <h1><span>Power</span>Spoke</h1>
-                    </div>
+                    <h1><span>Power</span>Spoke</h1>
                 </div>
+            </div>
 
-                {/*This will be collumn one for the footer section including navigating to different pages
-                similar to that of Navbar component */}
-                <div className="col-container">
-                    <div className="col">
-                        <h3>Navigation</h3>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/forum'>Forum</Link> </li>
-                            <li><Link to='/marketplace'>Marketplace</Link></li>
-                            <li><Link to='/contact'>Contact</Link></li>
-                    </div>
+            <span class="split-line"></span>
 
-                {/*This will be collumn two for the footer section prompting users to Sign In and Login to their account */}
-                    <div className="col">
-                        <h3>My Account</h3>
-                        <Link to='/signin'>
-                         <button>Sign in</button>
-                        </Link>
-                    </div>
+            {/*This will be column one for the footer section including navigating to different pages
+            similar to that of Navbar component */}
+            <div className="col-container">
+                {/* Social */}
+                <section>
+                    <a href='https://www.facebook.com/calstatenorthridge/' target="_blank" rel="noopener noreferrer"><FiFacebook className='social-icon' /> </a>
+                    <a href='https://www.linkedin.com/school/california-state-university-northridge/mycompany/' target="_blank" rel="noopener noreferrer"><FiLinkedin className='social-icon' /> </a>
+                    <a href='https://github.com/chizuo/COMP584-client-application' target="_blank" rel="noopener noreferrer"><FiGithub className='social-icon' /> </a>
+                </section>
 
-                {/*This will be collumn three that would allow users to joina  newsletter and access associated social links */}
-                    <form>
-                        <h3>Join Our Newsletter Today!</h3>
-                        <input type="email" placeholder='Enter your email' />
-                        <FiMail className='mail-icon' />
-                        <div className="social-group">
-                            <a href='https://www.facebook.com/calstatenorthridge/' target="_blank" rel="noopener noreferrer"><FiFacebook className='social-icon' /> </a>
-                            <a href='https://www.linkedin.com/school/california-state-university-northridge/mycompany/' target="_blank" rel="noopener noreferrer"><FiLinkedin className='social-icon' /> </a>
-                            <a href='https://github.com/chizuo/COMP584-client-application' target="_blank" rel="noopener noreferrer"><FiGithub className='social-icon' /> </a>
-                        </div>
-                    </form>
+                {/* Navigation */}
+                <section>
+                    <a href='/'><Link to='/'>Home</Link></a>
+                    <a href='/'><Link to='/forum'>Forum</Link> </a>
+                    <a href='/'><Link to='/marketplace'>Marketplace</Link></a>
+                    <a href='/'><Link to='/contact'>Contact</Link></a>
+                </section>
+
+                {/* Copyrights */}
+                <div class="copyright">
+                    Copyright © 2022 PowerSpoke - All rights reserved
                 </div>
             </div>
         </div>

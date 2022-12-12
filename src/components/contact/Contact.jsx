@@ -3,26 +3,33 @@ import './ContactStyles.css'
 
 const Contact = () => {
     return (
-        <div className='contact'>
-            <div className="container">
-                <div className="form-container">
-                    <form>
-                        <h1><span>Contact</span> Us</h1>
-                        <div>
-                            <label>Name</label>
-                            <input type="text" placeholder='Enter your name'/>
-                        </div>
-                        <div>
-                            <label>Email</label>
-                            <input type="email" placeholder='Enter your email'/>
-                        </div>
-                        <div>
-                            <label>Message</label>
-                            <textarea rows='10' placeholder='Enter your comments, questions or concerns'/>
-                        </div>
-                        <button>Submit</button>
-                    </form>
-                </div>
+        <div className='contact'> 
+            <div class="contact-box">
+                <h2>Contact<span> Us</span></h2>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="" required=""/>
+                        <label>Name</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="email" name="" required=""/>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="user-box">
+                        <textarea type="textarea" name="" required=""/>
+                        <label>Message</label>
+                    </div>
+
+                        <a href="/">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Submit
+                        </a>
+                </form>
             </div>
         </div>
     )

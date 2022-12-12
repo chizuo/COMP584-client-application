@@ -1,26 +1,31 @@
 import React from 'react'
 import './SignInStyles.css'
 
+
 const SignIn = () => {
     return (
-        <div className='signin'>
-            <div className="container">
-                <div className="form-container">
-                    <form>
-                        <h1><span>Sign</span> In</h1>
-                        <div>
-                            <label>Email</label>
-                            <input type="email" placeholder='Enter your email'/>
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input type="text" placeholder='Enter your password'/>
-                        </div>
-                        <button>Submit</button>
-                    </form>
+        <div class="signin-box">
+            <h2>Login</h2>
+            <form>
+                <div class="user-box">
+                    <input type="username" name="" required=""/>
+                    <label>Username</label>
                 </div>
-            </div>
+
+                <div class="user-box">
+                    <input type="password" name="" required=""/>
+                    <label>Password</label>
+                </div>
+                    <a href="/">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Submit
+                    </a>
+            </form>
         </div>
+
     )
 }
 

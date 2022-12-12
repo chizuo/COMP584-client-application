@@ -12,7 +12,13 @@ const Hero = () => {
                     <h1>Endlessly</h1>
                     <div>
                         <Link to='/forum'>
-                            <button>Learn More</button>
+                        <a href="/">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Explore The Forum
+                            </a>
                         </Link>
                     </div>
 

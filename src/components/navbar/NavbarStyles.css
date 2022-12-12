@@ -3,7 +3,7 @@
     height: 100px;
     position: absolute;
     z-index: 10;
-    background-color: rgba(202, 198, 198, 0.5);
+    background-color: rgba(129, 129, 129, 0.5);
 }
 
 .navbar .container {
@@ -61,7 +61,7 @@
 
 /* NAVBAR MEDIA QUERIES | Activates Hamburger Menu */
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1013px) {
     .navbar .hamburger {
         display: block;
         z-index: 15;
