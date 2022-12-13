@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <span class="split-line"></span>
+            {/* <span class="split-line"></span> */}
 
             {/*This will be column one for the footer section including navigating to different pages
             similar to that of Navbar component */}
@@ -28,7 +28,7 @@ const Footer = () => {
                     <a href='https://www.linkedin.com/school/california-state-university-northridge/mycompany/' target="_blank" rel="noopener noreferrer"><FiLinkedin className='social-icon' /> </a>
                     <a href='https://github.com/chizuo/COMP584-client-application' target="_blank" rel="noopener noreferrer"><FiGithub className='social-icon' /> </a>
                 </section>
-
+                <span class="split-line"></span>
                 {/* Navigation */}
                 <section>
                     <a href='/'><Link to='/'>Home</Link></a>
