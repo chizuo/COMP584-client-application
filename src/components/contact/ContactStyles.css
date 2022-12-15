@@ -188,12 +188,37 @@
     }
   }
   
-
+/* Regular Screens and Up */
 @media screen and (max-width: 940px) {
     .contact form {
         width: 100%;
     }
 }
+
+/* Ipad Transition */
+@media screen and (max-width: 501px) {
+  .contact-box {
+    transition: 0.5s;
+}
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 450px) {
+  .contact-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+}
+
 
 
 

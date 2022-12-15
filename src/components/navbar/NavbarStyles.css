@@ -93,9 +93,33 @@
         font-size: 1.8rem;
     }
 
+    .navbar .logo img, h1 {
+        transition: 0.5s;
+    }
 
 }
 
+/* Ipad and Regular Screen */
+@media screen and (max-width: 768px){
+    .navbar h1 {
+        font-size: 2rem;
+        transition: 0.5s;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 450px) {
+    .navbar h1 {
+        font-size: 1.2rem;
+        transition: 0.5s;
+    }
+
+    .navbar .logo img {
+        height: 80px;
+        width: 80px;
+        transition: 0.5s;
+    }
+}
 
 
 
