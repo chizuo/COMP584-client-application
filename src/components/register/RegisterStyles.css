@@ -8,12 +8,14 @@ html {
     background: linear-gradient(#141e30, #243b55);
   }
   
-  .signin-box {
+  .register-box {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 400px;
     padding: 40px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
@@ -21,26 +23,18 @@ html {
     border-radius: 10px;
   }
   
-  .signin-box h2 {
+  .register-box h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
   }
-
-  .class-box h5 {
-    
-    padding-top: 5rem;
-    padding-bottom:-2rem;
-    color: #fff;
-    text-align: center;
-  }
   
-  .signin-box .user-box {
+  .register-box .user-box {
     position: relative;
   }
   
-  .signin-box .user-box input {
+  .register-box .user-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -51,7 +45,7 @@ html {
     outline: none;
     background: transparent;
   }
-  .signin-box .user-box label {
+  .register-box .user-box label {
     position: absolute;
     top:0;
     left: 0;
@@ -62,15 +56,15 @@ html {
     transition: .5s;
   }
   
-  .signin-box .user-box input:focus ~ label,
-  .signin-box .user-box input:valid ~ label {
+  .register-box .user-box input:focus ~ label,
+  .register-box .user-box input:valid ~ label {
     top: -20px;
     left: 0;
     color: var(--primary-color);
     font-size: 12px;
   }
   
-  .signin-box form a {
+  .register-box form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -84,19 +78,19 @@ html {
     letter-spacing: 4px
   }
   
-  .signin-box a:hover {
+  .register-box a:hover {
     background: var(--primary-color);
     color: #fff;
     border-radius: 5px;
   }
   
-  .signin-box a span {
+  .register-box a span {
     position: absolute;
     display: block;
   }
 
   
-  .signin-box a span:nth-child(1) {
+  .register-box a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -114,7 +108,7 @@ html {
     }
   }
   
-  .signin-box a span:nth-child(2) {
+  .register-box a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -133,7 +127,7 @@ html {
     }
   }
   
-  .signin-box a span:nth-child(3) {
+  .register-box a span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -152,7 +146,7 @@ html {
     }
   }
   
-  .signin-box a span:nth-child(4) {
+  .register-box a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;

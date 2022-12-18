@@ -21,11 +21,12 @@ const Navbar = () => {
                 {/* Main Navbar when size is big enough */}
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
                     <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/bikes'>Bikes</Link></li>
                     <li><Link to='/forum'>Forum</Link> </li>
-                    <li><Link to='/marketplace'>Marketplace</Link></li>
-                    <li><Link to='/contact'>Contact</Link></li>
+                    
+                    
                     <Link to='/signin'>
-                    <button>Sign in</button>
+                    <img src={images.signin} class="login-user" alt="app__logo" />
                     </Link>
                 </ul>
                 {/* Hamburger Menu when page gets smaller */}

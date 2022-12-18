@@ -1,16 +1,16 @@
 import React from 'react'
 import Navbar from '../components/navbar/Navbar'
-import Marketplace from '../components/marketplace/Marketplace'
+import Bikes from '../components/bikes/Bikes'
 import Footer from '../components/footer/Footer'
 
-const MarketplacePage = () => {
+const BikePage = () => {
     return (
         <>
            <Navbar /> 
-           <Marketplace />
+           <Bikes />
            <Footer />
         </>
     )
 }
 
-export default MarketplacePage
+export default BikePage

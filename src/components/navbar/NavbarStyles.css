@@ -51,12 +51,22 @@
 }
 
 .navbar li:hover {
-    border-bottom: 1px solid var(--primary-color)
+    border-bottom: 1px solid var(--primary-color);
+    background-color: none;
 }
 
 .navbar .icon {
     font-size: 1.4rem;
     color: #fff;
+}
+
+.login-user {
+    height: 50px;
+    width: 50px;
+}
+
+.login-user:hover {
+    border-bottom: 1px solid var(--primary-color)
 }
 
 /* NAVBAR MEDIA QUERIES | Activates Hamburger Menu */

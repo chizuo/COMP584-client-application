@@ -10,16 +10,14 @@ const Hero = () => {
                     <h1>Explore Your </h1>
                     <h1 className='blue'>Bikes</h1>
                     <h1>Endlessly</h1>
-                    <div>
-                        <Link to='/forum'>
-                        <a href="/">
+                    <div> 
+                        <a href="/bikes">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
-                            Explore The Forum
-                            </a>
-                        </Link>
+                            Check out some bikes
+                            </a>     
                     </div>
 
                 </div>

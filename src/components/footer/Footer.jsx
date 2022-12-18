@@ -32,8 +32,8 @@ const Footer = () => {
                 {/* Navigation */}
                 <section>
                     <a href='/'><Link to='/'>Home</Link></a>
+                    <a href='/'><Link to='/bikes'>Bikes</Link></a>
                     <a href='/'><Link to='/forum'>Forum</Link> </a>
-                    <a href='/'><Link to='/marketplace'>Marketplace</Link></a>
                     <a href='/'><Link to='/contact'>Contact</Link></a>
                 </section>
 

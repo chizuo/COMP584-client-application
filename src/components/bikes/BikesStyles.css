@@ -1,65 +1,81 @@
-.hero {
+.bikes {
     width: 100%;
     height: 100vh;
-    background: url('../../assets/BikeHome.jpg') no-repeat center center/cover;
+    position: relative;
+    background: linear-gradient(#141e30, #243b55);;
 }
 
-.hero .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.bikes:before {
+    content: '';
+    position: absolute;
+    background: url();
+    background-color: black; 
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 
-.hero .content {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.bikes .content {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100vw;
     padding: 1rem;
-    margin-left: 6rem;
 }
 
-.hero h1 {
+.bikes .section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem;
+}
+
+.bikes h2, h3 {
     color: #f8f8f8;
+    text-align: center;
 }
 
-.hero .blue {
-    color: var(--primary-color);
+.bikes p {
+    color: #f8f8f8;
+    margin: 1rem 0;
 }
 
-.hero a {
+.bikes a {
     position: relative;
     display: inline-block;
-    padding: 10px 5px;
+    padding: 10px 20px;
     color: var(--primary-color);
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    letter-spacing: 4px;
-    margin-top: 0.25rem;
-  }
+    margin-top: 7px;
+    letter-spacing: 4px
+}
 
-.hero a:hover {
+.bikes a:hover {
     background: var(--primary-color);
     color: #fff;
     border-radius: 5px;
+}
   
-  }
-  
-.hero a span {
+.bikes a span {
     position: absolute;
     display: block;
-  }
+}
+
   
-.hero a span:nth-child(1) {
+.bikes a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
     background: var(--primary-color);
     animation: btn-anim1 1s linear infinite;
-  }
+}
   
 @keyframes btn-anim1 {
     0% {
@@ -68,9 +84,9 @@
     50%,100% {
       left: 100%;
     }
-  }
+}
   
-.hero a span:nth-child(2) {
+.bikes a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -78,7 +94,7 @@
     background: var(--primary-color);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
-  }
+}
   
 @keyframes btn-anim2 {
     0% {
@@ -87,9 +103,9 @@
     50%,100% {
       top: 100%;
     }
-  }
+}
   
-.hero a span:nth-child(3) {
+.bikes a span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -97,7 +113,7 @@
     background: var(--primary-color);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
-  }
+}
   
 @keyframes btn-anim3 {
     0% {
@@ -106,9 +122,9 @@
     50%,100% {
       right: 100%;
     }
-  }
+}
   
-.hero a span:nth-child(4) {
+.bikes a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -116,7 +132,7 @@
     background: var(--primary-color);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
-  }
+}
   
 @keyframes btn-anim4 {
     0% {
@@ -125,15 +141,12 @@
     50%,100% {
       bottom: 100%;
     }
-  }
-
-@media screen and (max-width:940px) {
-   .hero .content {
-    margin-left: 1rem;
-   } 
 }
 
 
-
-
-
+@media screen and (max-width: 940px) {
+    .bikes .content {
+        left: 0;
+        width: 100%;
+    }
+}
