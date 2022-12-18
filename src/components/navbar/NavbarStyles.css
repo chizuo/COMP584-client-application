@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .navbar .logo {
@@ -24,7 +25,7 @@
     display: flex;
     align-items: center;
     height: 100px;
-    width: 100px
+    width: 100px;
 }
 
 .navbar .logo .icon {
