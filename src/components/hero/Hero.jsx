@@ -1,7 +1,11 @@
 import React from 'react'
 import './HeroStyles.css'
 import {Link} from 'react-router-dom'
-
+{/*
+This component is basically a simple yet modern landing page.
+A button option will allow the user to reroute to the Bikes
+Page.
+*/}
 const Hero = () => {
     return (
         <div className='hero'>

@@ -1,7 +1,11 @@
 import React from 'react'
 import './RegisterStyles.css'
 
-
+/*
+This component is the Register Page. Accessible through the Login Page as 
+an addition button option aside from being able to login. Users are 
+rerouted to this page and prompted to fill in the required fields.
+*/
 const Register = () => {
     return (
         <div class="register-box">

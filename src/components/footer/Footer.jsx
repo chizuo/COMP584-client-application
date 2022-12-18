@@ -2,9 +2,12 @@ import React from 'react'
 import { FiFacebook, FiGithub, FiLinkedin } from 'react-icons/fi'
 import './FooterStyles.css'
 import images from '../../constants/images';
-
 import {Link} from 'react-router-dom'
 
+/*
+This component includes the Footer Section that is located throughout various pages.
+A few navigation buttons with their appropriate href links
+*/
 const Footer = () => {
     return (
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './ForumStyles.css'
 
+
 const Forum = () => {
     return (
         <div className='forum'>
