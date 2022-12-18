@@ -1,0 +1,75 @@
+.postbike-tag-selector {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  top: 10rem;
+  margin: 0 auto;
+}
+
+.postbike-tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.postbike-tag-button {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.postbike-tag-selector h1, p2 {
+    color: white;
+}
+
+.postbike-create-form-button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.postbike-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  top: 10rem;
+  padding: 16px;
+}
+
+.postbike-form-field {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.postbike-form-field label {
+  flex: 0 0 100px;
+  margin-right: 16px;
+}
+
+.postbike-form-field input[type="text"] {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+
+
+
+
+
+  

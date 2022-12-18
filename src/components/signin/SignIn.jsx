@@ -45,7 +45,7 @@ const SignIn = () => {
                     <span></span>
                     <span></span>
                     <span></span>
-                    SignIn
+                    Sign In
                 </button>
 
                 <div className="class-box">

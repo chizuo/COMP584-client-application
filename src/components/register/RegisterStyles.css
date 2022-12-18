@@ -1,16 +1,16 @@
 /*Register Styles*/
-html {
-    height: 100%;
-  }
+
   body {
     margin:0;
     padding:0;
+    height: 100vh;
+    position: relative;
     font-family: sans-serif;
     background: linear-gradient(#141e30, #243b55);
   }
   
   .register-box {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     width: 400px;
