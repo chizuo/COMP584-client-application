@@ -1,6 +1,6 @@
 [
     {
-        "title": "poop",
+        "title": "Bike1",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -22,7 +22,7 @@
         "link" : ""
     },
     {
-        "title": "poaaaop",
+        "title": "Bike2",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -44,7 +44,7 @@
         "link" : ""
     },
     {
-        "title": "tom",
+        "title": "Bike3",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -66,7 +66,7 @@
         "link" : ""
     },
     {
-        "title": "peepoo",
+        "title": "Bike4",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -88,7 +88,7 @@
         "link" : ""
     },
     {
-        "title": "omg",
+        "title": "Bike5",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -110,7 +110,7 @@
         "link" : ""
     },
     {
-        "title": "pee",
+        "title": "Bike6",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -132,7 +132,7 @@
         "link" : ""
     },
     {
-        "title": "fuk",
+        "title": "Bike7",
         "summary": "",
         "frame": "",
         "fork": "",
@@ -153,7 +153,4 @@
         "accessories": "",
         "link" : ""
     }
-
-    
-
 ]
