@@ -3,11 +3,18 @@ import './SearchStyles.css'
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from "@mui/icons-material/Close";
 
+/*
+This component is basically the Search Page. Accessible through the 
+Bikes Page as a button link. Users are able to search for specific 
+bikes through different categories based from the JSON Database file.
+*/
 
+//Initiate an empty search bar field for user input
 const Search = ({ placeholder, data }) => {
     const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
+  //As users type, the search will filter and display all possible results
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
@@ -15,6 +22,7 @@ const Search = ({ placeholder, data }) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
 
+    //If Else statement for filtering 
     if (searchWord === "") {
       setFilteredData([]);
     } else {
@@ -22,11 +30,13 @@ const Search = ({ placeholder, data }) => {
     }
   };
 
+  //Clear Field
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
   };
 
+  //Output search results
   return (
     <div className="search">
       <div className="search-inputs">

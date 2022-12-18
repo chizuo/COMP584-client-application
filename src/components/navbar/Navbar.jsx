@@ -4,7 +4,11 @@ import {Link} from 'react-router-dom'
 import './NavbarStyles.css'
 import images from '../../constants/images';
 
-
+/*
+This component is the NavBar that is displayed across all the pages.
+We will also impement a conditional rendering portion that would 
+display another Tab option that is only available to Logged In accounts 
+*/
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)

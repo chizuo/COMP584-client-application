@@ -4,7 +4,14 @@ import server from '../../config/service';
 import './SignInStyles.css';
 import {Link} from 'react-router-dom';
 
-
+/*
+This component is the SignIn Page. Accessible through
+the NavBar, this page will allow the users to login 
+with their credentials with JWT Authentication. Fields
+are to be inputted by the user and login. This would
+trigger the Conditional Rendering parameters and access 
+other logged in features.
+*/
 const SignIn = () => {
     const [username, getUsername] = useState("");
     const [password, getPassword] = useState("");
