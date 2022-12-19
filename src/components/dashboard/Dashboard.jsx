@@ -21,9 +21,8 @@ function Dashboard() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowForm(true);
-    }
+  }
  
-
   return (
 
     <div className="user-dashboard">
