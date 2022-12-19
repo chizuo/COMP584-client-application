@@ -7,8 +7,8 @@ const DashboardPage = () => {
     return (
         <>
            <Navbar /> 
-            <Dashboard />
-            <Footer />
+           <Dashboard />
+           <Footer />
         </>
     )
 }

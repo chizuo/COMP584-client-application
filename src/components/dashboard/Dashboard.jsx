@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AuthContext from '../../context/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 import { FaLock, FaUser, FaRegListAlt } from 'react-icons/fa';
 import './DashboardStyles.css';
 
@@ -7,9 +9,11 @@ User Dashboard (My Account) Page intitialized displaying
 appropriate fields. Users will also see their most recent posts.
 */
 const Dashboard = () => {
+  const { auth } = useContext(AuthContext);
+  
   return (
     <div className="user-dashboard">
-      <h1>User Dashboard</h1>
+    <h1>User Dashboard</h1>
 
       <section className="password-section">
         <h2>Change Password</h2>
@@ -73,8 +77,7 @@ const Dashboard = () => {
         </ul>
       </section>
     </div>
-    
-  );
+  )
 };
 
 export default Dashboard;

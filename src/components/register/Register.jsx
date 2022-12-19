@@ -13,9 +13,9 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [loginState, setLoginState] = useState(false);
 
-    const register = async(e) => {
+    const requestHandler = async(e) => {
         e.preventDefault();
-        Axios.post(`${server.local.host}/v1/account/register`, {
+        Axios.post(`${server.host}/v1/account/register`, {
             zipcode: zipcode,
             firstname: firstname,
             lastname: lastname,
@@ -63,7 +63,7 @@ const Register = () => {
                             <input type="password" name="" required="" onChange={(e) => { setPassword(e.target.value); }}/>
                             <label>Password</label>
                         </div>
-                            <button onClick={register}>
+                            <button onClick={requestHandler}>
                             <span></span>
                             <span></span>
                             <span></span>

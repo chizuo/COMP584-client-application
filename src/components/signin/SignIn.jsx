@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Axios from 'axios';
 import server from '../../config/service';
-import Dashboard from '../dashboard/Dashboard'
+import AuthContext from '../../context/AuthProvider';
+import Dashboard from '../dashboard/Dashboard';
+import { useNavigate } from 'react-router-dom';
 import './SignInStyles.css';
 import {Link} from 'react-router-dom';
 
@@ -16,7 +18,10 @@ other logged in features.
 const SignIn = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [errorMessage, setError] = useState("");
     const [loginState, setLoginState] = useState(false);
+    const { setAuth } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const requestHandler = async(e) => {
         e.preventDefault();
@@ -27,12 +32,15 @@ const SignIn = () => {
             }
         }).then((res) => {
             let result = res.status == 201 ? true : false;
+            setAuth({ user: res.data.username, token: res.data.token });
             setLoginState(result);
+        }).catch((err) => {
+            setError(err);
         });
     }
     return (
         <>
-            { loginState ? ( <Dashboard /> ) : (
+            { loginState ? navigate("/dashboard") : (
                 <div class="signin-box">
                     <h2>Login</h2>
                     <form>
@@ -61,8 +69,7 @@ const SignIn = () => {
                         </div>
                     </form>
                 </div>
-            )
-        }
+            )}
         </>
     )
 }
