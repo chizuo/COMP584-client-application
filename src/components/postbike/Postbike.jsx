@@ -48,7 +48,7 @@ class Postbike extends React.Component {
     let token = window.localStorage.getItem("token");
     let id = window.localStorage.getItem("id");
     let values = this.state.values;
-    values['id'] = id;
+    values['userId'] = id;
     let config = { headers: { Authorization: "Bearer " + token }}
     Axios.post(`${server.host}/v1/bikes`, this.state.values, config)
       .then(res => console.log(res))
