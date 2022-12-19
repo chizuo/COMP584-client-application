@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar/Navbar'
 import Search from '../components/search/Search'
 import Footer from '../components/footer/Footer'
-import BikeData from '../constants/bikedata'
+import BikeData from '../constants/bikedata.json'
 
 const SearchPage = () => {
     return (

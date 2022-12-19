@@ -28,6 +28,7 @@ ReactDOM.render(
         <Route path='/search' element={<SearchPage />} />
         <Route path='/postbike' element={<PostbikePage />} />
         <Route path='/dashboard' element={<DashboardPage />} />
+        <Route path='/posting' element={<PostingPage />} />
       </Routes>
     </AuthProvider>  
   </BrowserRouter>,

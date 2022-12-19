@@ -10,8 +10,8 @@ bikes through different categories based from the JSON Database file.
 */
 
 //Initiate an empty search bar field for user input
-const Search = ({ placeholder, data }) => {
-    const [filteredData, setFilteredData] = useState([]);
+  const Search = ({ placeholder, data }) => {
+  const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
   //As users type, the search will filter and display all possible results

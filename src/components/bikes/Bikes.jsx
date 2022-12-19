@@ -1,6 +1,4 @@
-import React from 'react'
 import './BikesStyles.css'
-import {Link} from 'react-router-dom'
 
 /*
 This component includes the internal page for Bikes. This page will disply a section that includes Currently Trending
