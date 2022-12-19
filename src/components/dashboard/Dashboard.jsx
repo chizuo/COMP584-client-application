@@ -109,7 +109,7 @@ function Form2() {
   const [firstname,setFirstName] = useState("");
   const [lastname,setLastName] = useState("");
   const { auth } = useContext(AuthContext);
-  const data = { username: auth.username, firstname: firstname, lastname: lastname, email: email }
+  const data = { username: auth.username, firstName: firstname, lastName: lastname, email: email }
   let config = { headers: { Authorization: "Bearer " + auth.token }}
   
   let requestHandler = (e) => {
