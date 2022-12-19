@@ -15,6 +15,7 @@ are to be inputted by the user and login. This would
 trigger the Conditional Rendering parameters and access 
 other logged in features.
 */
+
 const SignIn = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -52,18 +53,23 @@ const SignIn = () => {
                         <div class="user-box">
                             <input type="password" name="" required="" onChange={(e) => { setPassword(e.target.value);  }}/>
                             <label>Password</label>
-                        </div>    
+                        </div>   
+                        <div className="user-box">
                             <button onClick={requestHandler}>
-                            <a href="/signin" >
+                            <a href="/dashboard" >
                                 Signin
                             </a>
                         </button>
-        
+                        </div> 
+                        
+
                         <div className="class-box">
                             <h5>Don't have an Account? Register with us today!</h5>
+                            <div class="user-box">
                             <button>
                                <a href="/register">Register</a>    
                             </button>
+                        </div>
                         </div>
                     </form>
                 </div>

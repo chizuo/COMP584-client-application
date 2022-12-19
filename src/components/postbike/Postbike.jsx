@@ -42,7 +42,7 @@ class Postbike extends React.Component {
                 <input type="text" name={tag} />
                 </div>
             ))}
-            <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" />
             </form>
         );
       }

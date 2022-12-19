@@ -15,13 +15,17 @@ const Bikes = () => {
                     {/*Trending Bikes Collumn */}
                     <div className="trending-bikes">
                         <h3>Trending Bikes</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at veritatis quisquam voluptatem nostrum reprehenderit, tempore sint placeat, aperiam alias, facilis voluptate quod itaque deleniti molestiae non odit esse necessitatibus.</p>
+                        <p>Electric bikes are becoming increasingly popular, with many people opting for a more environmentally-friendly mode of transportation.</p>
+                        <p>Mountain bikes with full suspension systems are a hot trend in the biking world, allowing for a smooth and comfortable ride on rough terrain.</p>
+                        <p>Road bikes with aerodynamic frames are also gaining popularity, as they offer a fast and efficient ride for both recreational and competitive cycling.</p>
                     </div>
 
                     {/*Recently Added Collumn */}
                     <div className="recently-added">
                         <h3>Recently Added</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at veritatis quisquam voluptatem nostrum reprehenderit, tempore sint placeat, aperiam alias, facilis voluptate quod itaque deleniti molestiae non odit esse necessitatibus.</p>
+                        <p>Recently, several new bikes have been added to our webpage, including mountain bikes, road bikes, and electric bikes in a variety of sizes and colors.</p>
+                        <p>Many bike manufacturers are now offering a wider range of sizes and styles, including options for women and people of different heights and abilities.</p>
+                        <p>There has also been an increase in the development of smart bike technology, including features such as GPS tracking, automatic shifting, and connectivity to fitness apps.</p>
                     </div>
                 </div>
 

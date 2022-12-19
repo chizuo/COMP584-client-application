@@ -72,6 +72,8 @@ const Register = () => {
                             <input type="password" name="" required="" onChange={(e) => { setPassword(e.target.value); }}/>
                             <label>Password</label>
                         </div>
+
+                        <div class="user-box">
                             <button onClick={requestHandler}>
                             <span></span>
                             <span></span>
@@ -81,6 +83,7 @@ const Register = () => {
                                 Register
                             </a>
                             </button>
+                         </div>   
                     </form>
                 </div>
                 )

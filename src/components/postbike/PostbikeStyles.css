@@ -59,6 +59,7 @@
 .postbike-form-field label {
   flex: 0 0 100px;
   margin-right: 16px;
+  color: white;
 }
 
 .postbike-form-field input[type="text"] {
@@ -67,7 +68,6 @@
   border-radius: 4px;
   padding: 4px 8px;
 }
-
 
 
 
