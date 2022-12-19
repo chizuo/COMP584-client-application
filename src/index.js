@@ -13,9 +13,11 @@ import RegisterPage from './routes/RegisterPage';
 import SearchPage from './routes/SearchPage';
 import PostbikePage from './routes/PostbikePage';
 import DashboardPage from './routes/DashboardPage';
+import PostingPage from './routes/PostingPage';
 
 ReactDOM.render(
   <BrowserRouter>
+<<<<<<< Updated upstream
     <AuthProvider>
       <Routes>
         <Route path='/' element={<App />} />
@@ -29,6 +31,20 @@ ReactDOM.render(
         <Route path='/dashboard' element={<DashboardPage />} />
       </Routes>
     </AuthProvider>  
+=======
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='/forum' element={<Forum />} />
+      <Route path='/bikes' element={<Bikes />} />
+      <Route path='/contact' element={<ContactPage />} />
+      <Route path='/signin' element={<SignInPage />} />
+      <Route path='/register' element={<RegisterPage />} />
+      <Route path='/search' element={<SearchPage />} />
+      <Route path='/postbike' element={<PostbikePage />} />
+      <Route path='/dashboard' element={<DashboardPage />} />
+      <Route path='/testing' element={<PostingPage />} />
+    </Routes>
+>>>>>>> Stashed changes
   </BrowserRouter>,
   document.getElementById('root')
 );

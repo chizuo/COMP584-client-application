@@ -41,6 +41,7 @@ html {
     padding: 10px 5px;
     font-size: 16px;
     color: #fff;
+    margin-top:10px;
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
@@ -61,7 +62,7 @@ html {
   
   .register-box .user-box input:focus ~ label,
   .register-box .user-box input:valid ~ label {
-    top: -20px;
+    top: -32px;
     left: 0;
     color: var(--primary-color);
     font-size: 12px;

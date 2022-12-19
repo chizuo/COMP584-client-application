@@ -7,6 +7,18 @@
   height: 100vh;
   width: 100%;
 }
+.user-dashboard2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+
+.user-dashboard h1 {
+    color: white;
+}
 
 .password-section,
 .profile-section,
@@ -20,11 +32,16 @@
   border-radius: 5px;
 }
 
+.dropdown-menu-name {
+    color: #fff;
+    
+}
+
 form label,
 form input,
 form button {
   display: block;
-  margin: 0.5rem 0;
+  margin: 1rem 1rem;
 }
 
 form input,

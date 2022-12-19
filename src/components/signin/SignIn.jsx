@@ -31,8 +31,12 @@ const SignIn = () => {
                 password: password
             }
         }).then((res) => {
+<<<<<<< Updated upstream
             let result = res.status == 201 ? true : false;
             setAuth({ user: res.data.username, token: res.data.token });
+=======
+            let result = res.status === 201 ? true : false;
+>>>>>>> Stashed changes
             setLoginState(result);
         }).catch((err) => {
             setError(err);
@@ -54,18 +58,16 @@ const SignIn = () => {
                             <label>Password</label>
                         </div>    
                             <button onClick={requestHandler}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Sign In
+                            <a href="/signin" >
+                                Signin
+                            </a>
                         </button>
         
                         <div className="class-box">
                             <h5>Don't have an Account? Register with us today!</h5>
-                            <a href="/register" >
-                                Register
-                            </a>
+                            <button>
+                               <a href="/register">Register</a>    
+                            </button>
                         </div>
                     </form>
                 </div>
