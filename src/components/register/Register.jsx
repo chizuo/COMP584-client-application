@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import Axios from 'axios';
 import server from '../../config/service';
 import AuthContext from '../../context/AuthProvider';
-import Dashboard from '../dashboard/Dashboard';
 import { useNavigate } from 'react-router-dom';
 import './RegisterStyles.css';
 
@@ -14,7 +13,7 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loginState, setLoginState] = useState(false);
-    const [errorMessage, setError] = useState("");
+    const [systemMsg, setSystemMsg] = useState("");
     const { setAuth } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -28,14 +27,13 @@ const Register = () => {
             username: username,
             password: password
         }).then((res) => {
-            let result = res.status == 200 ? true : false;
-            setAuth({ user: res.data.username, token: res.data.token });
+            let result = res.status === 200 ? true : false;
+            setAuth({ username: res.data.username, token: res.data.token });
             setLoginState(result);
         }).catch((err) => {
-            setError(err);
+            setSystemMsg("username or email is already in use");
         });
     }
-
 
     return (
         <>
@@ -83,7 +81,8 @@ const Register = () => {
                                 Register
                             </a>
                             </button>
-                         </div>   
+                            <p className={systemMsg ? "system" : "offscreen"} aria-live="assertive">{systemMsg}</p>
+                        </div>
                     </form>
                 </div>
                 )

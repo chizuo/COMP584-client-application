@@ -2,10 +2,8 @@ import React, { useState, useContext } from 'react';
 import Axios from 'axios';
 import server from '../../config/service';
 import AuthContext from '../../context/AuthProvider';
-import Dashboard from '../dashboard/Dashboard';
 import { useNavigate } from 'react-router-dom';
 import './SignInStyles.css';
-import {Link} from 'react-router-dom';
 
 /*
 This component is the SignIn Page. Accessible through
@@ -19,7 +17,7 @@ other logged in features.
 const SignIn = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [errorMessage, setError] = useState("");
+    const [systemMsg, setSystemMsg] = useState("");
     const [loginState, setLoginState] = useState(false);
     const { setAuth } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -32,11 +30,13 @@ const SignIn = () => {
                 password: password
             }
         }).then((res) => {
-            let result = res.status == 201 ? true : false;
-            setAuth({ user: res.data.username, token: res.data.token });
+            let result = res.status === 201 ? true : false;
+            console.log(res.data)
+            setAuth({ username: res.data.username, token: res.data.token });
             setLoginState(result);
         }).catch((err) => {
-            setError(err);
+            setLoginState(false);
+            setSystemMsg("invalid combination");
         });
     }
     return (
@@ -56,13 +56,11 @@ const SignIn = () => {
                         </div>   
                         <div className="user-box">
                             <button onClick={requestHandler}>
-                            <a href="/dashboard" >
                                 Signin
-                            </a>
-                        </button>
-                        </div> 
+                            </button>
+                        </div>
                         
-
+                        <p className={systemMsg ? "system" : "offscreen"} aria-live="assertive">{systemMsg}</p>
                         <div className="class-box">
                             <h5>Don't have an Account? Register with us today!</h5>
                             <div class="user-box">

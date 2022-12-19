@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import Axios from 'axios';
+import server from '../../config/service';
 import './SearchStyles.css'
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from "@mui/icons-material/Close";
@@ -18,6 +20,7 @@ bikes through different categories based from the JSON Database file.
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
+
     const newFilter = data.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -36,13 +39,17 @@ bikes through different categories based from the JSON Database file.
     setWordEntered("");
   };
 
+  const requestHandler = async(e) => {
+
+  };
+
   //Output search results
   return (
     <div className="search">
       <div className="search-inputs">
         <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter}/>
         <div className="search-icon">
-          {filteredData.length === 0 ? ( <SearchIcon /> ) : ( <CloseIcon id="clear-btn" onClick={clearInput} /> )}
+          {filteredData.length === 0 ? ( <SearchIcon onClick={requestHandler}/> ) : ( <CloseIcon id="clear-btn" onClick={clearInput} /> )}
         </div>
       </div>
       {filteredData.length !== 0 && (

@@ -31,6 +31,15 @@ html {
     color: #fff;
     text-align: center;
   }
+
+  .offscreen {
+    opacity: 0;
+  }
+  
+  .system {
+    opacity: 1;
+    color: red;
+  }
   
   .register-box .user-box {
     position: relative;

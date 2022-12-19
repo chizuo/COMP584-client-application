@@ -29,6 +29,15 @@ html {
     text-align: center;
   }
 
+  .offscreen {
+    opacity: 0;
+  }
+  
+  .system {
+    opacity: 1;
+    color: red;
+  }
+  
   .class-box h5 {
     
     padding-top: 5rem;
