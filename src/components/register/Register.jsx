@@ -28,7 +28,7 @@ const Register = () => {
             password: password
         }).then((res) => {
             let result = res.status === 200 ? true : false;
-            setAuth({ username: res.data.username, token: res.data.token });
+            setAuth({ id: res.data.id, username: res.data.username, token: res.data.token });
             setLoginState(result);
         }).catch((err) => {
             setSystemMsg("username or email is already in use");

@@ -48,7 +48,9 @@ class Postbike extends React.Component {
     let token = window.localStorage.getItem("token");
     let id = window.localStorage.getItem("id");
     let values = this.state.values;
-    values['userId'] = id;
+    values['userId'] = parseInt(id);
+    this.setState({ values });
+    console.log(values);
     let config = { headers: { Authorization: "Bearer " + token }}
     Axios.post(`${server.host}/v1/bikes`, this.state.values, config)
       .then(res => console.log(res))
@@ -84,7 +86,7 @@ class Postbike extends React.Component {
             <div className="postbike-tag-selector">
                 <h1>Select tags:</h1>
                 <div className="postbike-tag-buttons">
-                    {['Title', 'Summary', 'Frame', 'Fork', 'Headset', 'Bottom Bracket', 'Crankset', 'Derailleurs', 'Shifters', 'Handle Bars', 'Stem', 'Seatpost', 'Saddle','Brakes', 'Brake Levers', 'Pedals', 'Tires', 'Wheels', 'Accessories'].map(tag => (
+                    {['title', 'summary', 'frame', 'fork', 'headset', 'bottom_bracket', 'crankset', 'derailleurs', 'shifters', 'handle_bars', 'stem', 'seatpost', 'saddle','brakes', 'brake_levers', 'pedals', 'tires', 'wheels', 'accessories'].map(tag => (
                     <button key={tag} className="postbike-tag-button" onClick={() => this.handleTagClick(tag)}>
                         {tags.includes(tag) ? <strong>{tag}</strong> : tag}
                     </button>

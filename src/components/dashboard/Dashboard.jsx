@@ -14,6 +14,8 @@ function Dashboard() {
   const { auth } = useContext(AuthContext);
   window.localStorage.setItem("token", auth.token);
   window.localStorage.setItem("user", auth.username);
+  window.localStorage.setItem("id", auth.id);
+  console.log(auth);
   const [selectedOption, setSelectedOption] = useState('');
   const [showForm, setShowForm] = useState(true);
   const [showSection] = useState(true);

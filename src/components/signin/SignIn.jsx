@@ -31,7 +31,8 @@ const SignIn = () => {
             }
         }).then((res) => {
             let result = res.status === 201 ? true : false;
-            setAuth({ username: res.data.username, token: res.data.token });
+            console.log(res.data)
+            setAuth({ id: res.data.id, username: res.data.username, token: res.data.token });
             setLoginState(result);
         }).catch((err) => {
             setLoginState(false);
