@@ -13,13 +13,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [loginState, setLoginState] = useState(false);
 
-<<<<<<< Updated upstream
     const requestHandler = async(e) => {
-=======
-
-
-    const register = async(e) => {
->>>>>>> Stashed changes
         e.preventDefault();
         Axios.post(`${server.host}/v1/account/register`, {
             zipcode: zipcode,

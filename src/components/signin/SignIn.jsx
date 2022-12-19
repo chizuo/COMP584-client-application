@@ -31,12 +31,8 @@ const SignIn = () => {
                 password: password
             }
         }).then((res) => {
-<<<<<<< Updated upstream
             let result = res.status == 201 ? true : false;
             setAuth({ user: res.data.username, token: res.data.token });
-=======
-            let result = res.status === 201 ? true : false;
->>>>>>> Stashed changes
             setLoginState(result);
         }).catch((err) => {
             setError(err);

@@ -1,24 +1,16 @@
-<<<<<<< Updated upstream
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AuthContext from '../../context/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-=======
-import React, { useState } from 'react';
->>>>>>> Stashed changes
 import { FaLock, FaUser, FaRegListAlt } from 'react-icons/fa';
 import './DashboardStyles.css';
 
-/*
+/* 
 User Dashboard (My Account) Page intitialized displaying 
 appropriate fields. Users will also see their most recent posts.
-*/
-<<<<<<< Updated upstream
-const Dashboard = () => {
-  const { auth } = useContext(AuthContext);
-  
-=======
+*/ 
 function Dashboard() {
-  const [selectedOption, setSelectedOption] = useState('');
+    const { auth } = useContext(AuthContext);
+    const [selectedOption, setSelectedOption] = useState('');
     const [showForm, setShowForm] = useState(true);
     const [showSection] = useState(true);
 
@@ -32,17 +24,13 @@ function Dashboard() {
     }
  
 
->>>>>>> Stashed changes
   return (
 
     <div className="user-dashboard">
-<<<<<<< Updated upstream
-    <h1>User Dashboard</h1>
-=======
         <h1>User Dashboard</h1>
       <form onSubmit={handleSubmit}>
         <label className="dropdown-menu-name">
-          Account Features:  
+          Account Features: 
           <select value={selectedOption} onChange={handleOptionChange}>
             <option value="form1">Change Password</option>
             <option value="form2">Change Information</option>
@@ -55,7 +43,6 @@ function Dashboard() {
       {showSection && selectedOption === 'section1' && <Section1 />}
       
     </div>
->>>>>>> Stashed changes
 
   );
 }
@@ -102,10 +89,6 @@ function Form2() {
         </form>  
             <button type="submit">Save Changes</button>
     </div>
-<<<<<<< Updated upstream
-  )
-};
-=======
   );
 }
 
@@ -135,6 +118,5 @@ function Section1() {
 }
 
 
->>>>>>> Stashed changes
 
 export default Dashboard;
