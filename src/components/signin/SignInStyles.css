@@ -172,5 +172,28 @@ html {
     }
   }
   
+/* Big Computer Screens  */
+@media screen and (max-width: 970px){
+    .signin-box {
+    width: 400px;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 760px){
+    .signin-box {
+    top: 25rem;
+    transition: 0.5s;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 500px){
+    .signin-box {
+    position: absolute;
+    transition: 0.5s;
+    width: 300px;
+  }
+}
 
 

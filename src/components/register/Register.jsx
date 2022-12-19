@@ -4,6 +4,7 @@ import server from '../../config/service';
 import './RegisterStyles.css';
 
 const Register = () => {
+    const [zipcode, setZipcode] = useState("");
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ const Register = () => {
 
     const register = () => {
         Axios.post(`${server.local.host}/v1/account/register`, {
+            zipcode: zipcode,
             firstname: firstname,
             lastname: lastname,
             email: email,
@@ -26,6 +28,11 @@ const Register = () => {
         <div class="register-box">
             <h2>Create an Account</h2>
             <form>
+                <div class="user-box">
+                    <input type="number" name="" required="" onChange={(e) => { setZipcode(e.target.value); }}/>
+                    <label>Zip Code</label>
+                </div>
+                
                 <div class="user-box">
                     <input type="firstName" name="" required="" onChange={(e) => { setFirstname(e.target.value); }}/>
                     <label>First Name</label>

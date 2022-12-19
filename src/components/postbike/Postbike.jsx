@@ -10,22 +10,28 @@ class Postbike extends React.Component {
     };
   }
 
+  /*Event handler that will detect which tags are being selected for form populating */
   handleTagClick = (tag) => {
     let tags = this.state.tags;
-    if (tags.includes(tag)) {
-      tags = tags.filter(t => t !== tag);
-    } else {
-      tags.push(tag);
-    }
+      if (tags.includes(tag))
+      {
+        tags = tags.filter(t => t !== tag);
+      }
+      else
+      {
+        tags.push(tag);
+      }
     this.setState({ tags });
   }
 
+  /*Event handler that will generate form based off of selected tag values */
   handleCreateFormClick = () => {
     this.setState({ formVisible: true });
   }
-
+ /*Rendering the form  */
   render() {
     const { tags, formVisible } = this.state;
+    /*Renders based off of tags */
       if (formVisible)
       {
         return (
@@ -40,6 +46,7 @@ class Postbike extends React.Component {
             </form>
         );
       }
+      /*Returns user back to Postbike Page to select their tags */
       else
       {
         return (

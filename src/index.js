@@ -12,6 +12,7 @@ import SignInPage from './routes/SignInPage';
 import RegisterPage from './routes/RegisterPage';
 import SearchPage from './routes/SearchPage';
 import PostbikePage from './routes/PostbikePage';
+import DashboardPage from './routes/DashboardPage';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -24,6 +25,7 @@ ReactDOM.render(
       <Route path='/register' element={<RegisterPage />} />
       <Route path='/search' element={<SearchPage />} />
       <Route path='/postbike' element={<PostbikePage />} />
+      <Route path='/dashboard' element={<DashboardPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
