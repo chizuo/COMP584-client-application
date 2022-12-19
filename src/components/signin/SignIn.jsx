@@ -24,14 +24,13 @@ const SignIn = () => {
 
     const requestHandler = async(e) => {
         e.preventDefault();
-        Axios.get(`${server.host}/v1/account/login`, {
+        Axios.get(`${server.local}/v1/account/login`, {
             auth: {
                 username: username,
                 password: password
             }
         }).then((res) => {
             let result = res.status === 201 ? true : false;
-            console.log(res.data)
             setAuth({ username: res.data.username, token: res.data.token });
             setLoginState(result);
         }).catch((err) => {
