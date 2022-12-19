@@ -70,7 +70,10 @@ class Postbike extends React.Component {
                 <input type="text" name={tag} value={values[`${tag}`]} onChange={this.fieldHandler}/>
                 </div>
             ))}
-            <input type="submit" value="Submit"/>
+              <div className="submit-section">
+                <input type="file" accept="image/*" onChange={this.handleChange} />
+                <button type="submit" value="Submit">Submit Your Bike</button>
+            </div>
             </form>
         );
       }
