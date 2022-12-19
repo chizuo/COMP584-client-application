@@ -10,6 +10,7 @@ appropriate fields. Users will also see their most recent posts.
 */ 
 function Dashboard() {
     const { auth } = useContext(AuthContext);
+    
     const [selectedOption, setSelectedOption] = useState('');
     const [showForm, setShowForm] = useState(true);
     const [showSection] = useState(true);
@@ -21,8 +22,9 @@ function Dashboard() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowForm(true);
-  }
+    }
  
+
   return (
 
     <div className="user-dashboard">
