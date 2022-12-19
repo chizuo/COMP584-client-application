@@ -23,7 +23,6 @@ const Hero = () => {
                             Check out some bikes
                             </a>     
                     </div>
-
                 </div>
             </div>
         </div>

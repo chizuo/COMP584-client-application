@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Axios from 'axios';
 import server from '../../config/service';
-import Dashboard from '../dashboard/Dashboard'
+import AuthContext from '../../context/AuthProvider';
+import Dashboard from '../dashboard/Dashboard';
+import { useNavigate } from 'react-router-dom';
 import './RegisterStyles.css';
 
 const Register = () => {
@@ -12,6 +14,9 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loginState, setLoginState] = useState(false);
+    const [errorMessage, setError] = useState("");
+    const { setAuth } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const requestHandler = async(e) => {
         e.preventDefault();
@@ -24,14 +29,17 @@ const Register = () => {
             password: password
         }).then((res) => {
             let result = res.status == 200 ? true : false;
+            setAuth({ user: res.data.username, token: res.data.token });
             setLoginState(result);
+        }).catch((err) => {
+            setError(err);
         });
     }
 
 
     return (
         <>
-            { loginState ? ( <Dashboard /> ) : (
+            { loginState ? navigate("/dashboard") : (
                 <div class="register-box">
                 <h2>Create an Account</h2>
                     <form>
