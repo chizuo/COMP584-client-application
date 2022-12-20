@@ -92,7 +92,6 @@
         transition: 0.5s;
         inline-size: 600px;
         overflow-wrap: break-word;
-
 }
 }
 
@@ -104,7 +103,27 @@
 
     .bikes {
         width:100vw;
-        height: 150vh;
+        height: 200vh;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    .bikes .section .recently-added,
+    .bikes .section .trending-bikes {
+        transition: 0.5s;
+        inline-size: 400px;
+        overflow-wrap: break-word;
     }
 }
+
+@media screen and (max-width: 460px) {
+    .bikes .section .recently-added,
+    .bikes .section .trending-bikes {
+        transition: 0.5s;
+        inline-size: 300px;
+        overflow-wrap: break-word;
+    }
+}
+
 
