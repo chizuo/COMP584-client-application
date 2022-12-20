@@ -24,7 +24,7 @@ const SignIn = () => {
 
     const requestHandler = async(e) => {
         e.preventDefault();
-        Axios.get(`${server.local}/v1/account/login`, {
+        Axios.get(`${server.host}/v1/account/login`, {
             auth: {
                 username: username,
                 password: password
