@@ -46,7 +46,7 @@ bikes through different categories based from the JSON Database file.
     let search = wordEntered;
     Axios.get(`${server.host}/v1/bikes/searchbar/search?title=${search}`)
     .then( res => {
-
+      setFilteredData(res.data);
     }).catch( err => {
 
     });
