@@ -27,16 +27,10 @@ const Bikes = () => {
                         <p>Many bike manufacturers are now offering a wider range of sizes and styles, including options for women and people of different heights and abilities.</p>
                         <p>There has also been an increase in the development of smart bike technology, including features such as GPS tracking, automatic shifting, and connectivity to fitness apps.</p>
                     </div>
+                    <button><a href="/search" className="postbike-page">Search For a Bike Here</a></button>
                 </div>
 
                 {/*Search button that will reference and reroute to the Search page */}
-                <a href="/search">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Search For Bikes Here
-                </a> 
             </div>        
         </div>
     )

@@ -1,7 +1,7 @@
 .forum {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(#141e30, #243b55);
+    background: url('../../assets/bikeTransitionPic.jpg') no-repeat center center/cover;
     position: relative;
 }
 
@@ -20,10 +20,11 @@
     width: 50%;
     left: 0;
     padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .forum h2 {
-    color: #f8f8f8;
+    color: #ffffff;
 }
 
 .forum p {

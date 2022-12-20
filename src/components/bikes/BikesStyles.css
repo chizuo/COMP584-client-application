@@ -1,10 +1,10 @@
 /*Main Bikes Page Styles*/
 .bikes {
     width: 100%;
-    height: 200vh;
+    height: 100vh;
     position: relative;
     text-align: center;
-    background: linear-gradient(#141e30, #243b55);;
+    background: url('../../assets/bikeforum.jpg') no-repeat center center/cover;
 }
 
 .bikes:before {
@@ -27,16 +27,29 @@
 
 .bikes .section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+
+    
     padding: 5rem;
 }
 
-.bikes h2, h3 {
-    color: #f8f8f8;
+.bikes .section .recently-added,
+.bikes .section .trending-bikes {
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1.5rem;
+    inline-size: 800px;
+    overflow-wrap: break-word;
     text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+.bikes  h2, h3 {
+    color: #f8f8f8;
+
 }
 
 .bikes p {
@@ -44,10 +57,8 @@
     margin: 1rem 0;
 }
 
-.bikes a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
+.bikes button {
+    padding: 10px 10px;
     color: var(--primary-color);
     font-size: 16px;
     text-decoration: none;
@@ -59,94 +70,13 @@
     
 }
 
-.bikes a:hover {
+.bikes button:hover {
     background: var(--primary-color);
     color: #fff;
     border-radius: 5px;
 }
   
-.bikes a span {
-    position: absolute;
-    display: block;
-}
 
-  
-.bikes a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: var(--primary-color);
-    animation: btn-anim1 1s linear infinite;
-}
-  
-/*Keyframes for the Button Animation1 on page*/
-@keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-}
-  
-.bikes a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--primary-color);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-}
-
-/*Keyframes for the Button Animation1 on page*/
-@keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-    50%,100% {
-      top: 100%;
-    }
-}
-  
-.bikes a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: var(--primary-color);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-}
-  
-@keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-    50%,100% {
-      right: 100%;
-    }
-}
-  
-.bikes a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--primary-color);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-}
-  
-@keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {
-      bottom: 100%;
-    }
-}
 
 /* Big Screens  */
 @media screen and (max-width: 940px) {
@@ -155,3 +85,26 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width:880px) {
+    .bikes .section .recently-added,
+    .bikes .section .trending-bikes {
+        transition: 0.5s;
+        inline-size: 600px;
+        overflow-wrap: break-word;
+
+}
+}
+
+@media screen and (max-width: 771px) {
+    .bikes .content {
+        left: 0;
+        width: 100%;
+    }
+
+    .bikes {
+        width:100vw;
+        height: 150vh;
+    }
+}
+
