@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import server from '../../config/service';
 import Axios from 'axios';
 import AuthContext from '../../context/AuthProvider';
@@ -11,6 +11,7 @@ class Postbike extends React.Component {
     this.state = {
       tags: [],
       values: {},
+      systemMsg: "",
       formVisible: false
     };
   }
@@ -53,8 +54,17 @@ class Postbike extends React.Component {
     console.log(values);
     let config = { headers: { Authorization: "Bearer " + token }}
     Axios.post(`${server.host}/v1/bikes`, this.state.values, config)
-      .then(res => console.log(res))
-      .catch(err => console.log(`Error Message: ${err.message}`));
+      .then(res => {
+        this.setState({ systemMsg: `${res.data.title} has been saved` });
+        let tags = this.state.tags;
+        let values = this.state.values;
+        for(let i = 0; i < tags; i++)
+        {
+          values[tags[i]] = '';
+        }
+        this.setState({values});
+      })
+      .catch(err => this.setState({ systemMsg: err }));
   }
 
  /*Rendering the form  */
@@ -76,6 +86,7 @@ class Postbike extends React.Component {
                 <input type="file" accept="image/*" onChange={this.handleChange} />
                 <button type="submit" value="Submit">Submit Your Bike</button>
             </div>
+            <p className={this.state.systemMsg ? "system" : "offscreen"} aria-live="assertive">{this.state.systemMsg}</p>
             </form>
         );
       }

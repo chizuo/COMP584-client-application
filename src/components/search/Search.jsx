@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import Axios from 'axios';
 import server from '../../config/service';
+import AuthContext from '../../context/AuthProvider';
 import './SearchStyles.css'
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from "@mui/icons-material/Close";
@@ -13,6 +14,7 @@ bikes through different categories based from the JSON Database file.
 
 //Initiate an empty search bar field for user input
   const Search = ({ placeholder, data }) => {
+  const { auth } = useContext(AuthContext);
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -40,7 +42,14 @@ bikes through different categories based from the JSON Database file.
   };
 
   const requestHandler = async(e) => {
+    e.preventDefault();
+    let search = wordEntered;
+    Axios.get(`${server.host}/v1/bikes/searchbar/search?title=${search}`)
+    .then( res => {
 
+    }).catch( err => {
+
+    });
   };
 
   //Output search results

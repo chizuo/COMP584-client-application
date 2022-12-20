@@ -24,6 +24,15 @@
   cursor: pointer;
 }
 
+.offscreen {
+  opacity: 0;
+}
+
+.system {
+  opacity: 1;
+  color: red;
+}
+
 .postbike-tag-selector h1, p2 {
     color: white;
 }

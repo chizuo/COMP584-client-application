@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import AuthContext from '../../context/AuthProvider';
 import server from '../../config/service';
-import { useNavigate } from 'react-router-dom';
 import { FaLock, FaUser, FaRegListAlt } from 'react-icons/fa';
 import './DashboardStyles.css';
 import Axios from 'axios';
@@ -55,7 +54,6 @@ function Dashboard() {
 
 function Form1() {
   const [systemMsg,setSystemMsg] = useState("");
-  const [success, setSuccess] = useState(false);
   const [password,setPassword] = useState("");
   const [newpw,setNewPw] = useState("");
   const [confirm,setConfirm] = useState("");
@@ -63,14 +61,12 @@ function Form1() {
 
   let requestHandler = (e) => {
     e.preventDefault();
-    if(newpw == confirm)
+    if(newpw === confirm)
     {
       const data = { username: auth.username, password: password, newpw: newpw }
       let config = { headers: { Authorization: "Bearer " + auth.token }}
       Axios.put(`${server.host}/v1/account/updatePassword`, data, config)
         .then( res => {
-          let result = res.status === 200 ? true : false;
-          setSuccess(result);
           setSystemMsg("password successfully changed");
           setPassword('');
           setNewPw('');
@@ -105,7 +101,6 @@ function Form1() {
 }
 
 function Form2() {
-  const [success, setSuccess] = useState(false);
   const [email,setEmail] = useState("");
   const [systemMsg,setSystemMsg] = useState("");
   const [firstname,setFirstName] = useState("");
@@ -118,8 +113,6 @@ function Form2() {
     e.preventDefault();
     Axios.put(`${server.host}/v1/account/updateInfo`, data, config)
     .then(res => {
-      let result = res.status === 200 ? true : false;
-      setSuccess(result);
       setFirstName('');
       setLastName('');
       setEmail('');

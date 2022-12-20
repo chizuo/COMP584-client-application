@@ -20,9 +20,9 @@ const Register = () => {
     const requestHandler = async(e) => {
         e.preventDefault();
         Axios.post(`${server.host}/v1/account/register`, {
-            zipcode: zipcode,
-            firstname: firstname,
-            lastname: lastname,
+            zipCode: zipcode,
+            firstName: firstname,
+            lastName: lastname,
             email: email,
             username: username,
             password: password
